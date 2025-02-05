@@ -6,45 +6,59 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="Submitform">
-        <label for="text">text input</label>
-        <input type="text" placeholder="Enter text"><br><br>
+        <h1>Comprehensive HTML Form</h1>
+        <!-- text input -->
+        <label for="text">text input:</label>
+        <input type="text" id="text" placeholder="Enter text"><br><br>
         <label for="Password">password</label>
         <input type="Password"><br><br>
-        <label for="Email">email</label>
+        <!-- Email -->
+        <label for="Email">Email:</label>
         <input type="Email"><br><br>
+        <!-- number -->
         <label for="Number">number</label>
         <input type="Number"><br><br>
-        <label for="date">date</label>
+        <!-- date -->
+        <label for="date">date:</label>
         <input type="date"><br><br>
+        <!-- time -->
         <label for="time">time:</label>
         <input type="time"><br><br>
-        <label for="color">color</label>
+        <!-- color -->
+        <label for="color">color:</label>
         <input type="color"><br><br>
-        <label for="Subscribe">subscribe</label>
+        <!-- subscribe -->
+        <label for="Subscribe">subscribe:</label>
         <input type="Checkbox" id="subscribe" name="subscribe"><br><br>
+        <!-- radio button -->
         <label>Gender:</label><br>
         <input type="radio" id="male" name="gender" value="male">
         <label for="male">Male</label><br>
         <input type="radio" id="female" name="gender" value="female">
-        <label for="femamle">female</label><br><br>
+        <label for="female">female</label><br><br>
+        <!-- country -->
         <label for="">Country:</label>
         <select name="country" id="country">
-            <option value="india">india</option>
+            <option value="india">select</option>
             <option value="usa">usa</option>
             <option value="uk">uk</option>
             <option value="canada">canada</option>
         </select><br><br>
+        <!-- comments -->
+         <label for="comments">comments:</label>
+         <textarea name="comments" id="comments" rows="4" cols="50"></textarea><br><br>
+         <!-- file -->
         <label for="Upload file">upload file</label>
         <input type="file"><br><br>
+        <!-- range -->
         <label for="range">range:</label>
         <input type="range"><br><br>
-        <label for="Url">Url</label>
+        <!-- website -->
+        <label for="">website:</label>
         <input type="Url"><br><br>
-        <span><button>Submit form</button></span>
-        <textarea name="comments" id="comments" rows="4" cols="50"></textarea>
-        
-
+        <!-- buttons -->
+        <span><button>Submit form</button>
+        <button>Reset form</button></span>
 
     </form>
 </body>
