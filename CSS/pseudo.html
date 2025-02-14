@@ -6,44 +6,27 @@
     <title>Pseudo code</title>
 </head>
 <style>
-    /* .styled-button{
-        background-color: blue;
-        padding: 15px;
-        font-size: 50px;
-        border-radius: 25px;
-        text-decoration: none;
+    div::before{
+        content: "*";
     }
 
-    .styled-button:hover{
-        background-color: peru;
+    div::after{
+        content:"Reddy";
     }
-    .styled-button:focus{
-        background-color: blueviolet;
-    }
-    .styled-button:active{
-        background-color:greenyellow;
-    } */
-     li{
-        font-size: 20px;
-        color: pink
-     }
-     li:nth-child(even) {
-        background-color: gray;
-     }
-     li:nth-child(3n) {
-        color: orangered;
-     }
-     </style>
 
+    div::first-letter{
+        color:brown;
+        background-color: black;
+    }
+
+    ::selection{
+        color: greenyellow;
+    }
+</style>
+    
+    
 <body>
-    <!-- <button  class="styled-button">visit google</button> -->
-     <ul>
-        <li>dfghsdf</li>
-        <li>sdfgh</li>
-        <li>wertyhj</li>
-        <li>wertyu</li>
-        <li>sdefrg</li>
-        <li>dcfvbnm</li>
-     </ul>
+    
+     <div>shriya</div>
 </body>
 </html>
