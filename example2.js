@@ -16,7 +16,7 @@ rabbit.walk();
 animal.walk();
 
 
-
+// call apply bind
 
 var employee1 = {firstName: "John", lastName: "Rodson"};
 var employee2 = {firstName: "Jimmy", lastName: "Baily"};
@@ -34,3 +34,5 @@ var inviteEmployee1 = invite.bind(employee1);
 var inviteEmployee2 = invite.bind(employee2);
 inviteEmployee1("hello","how are you");
 inviteEmployee2("hello","how are you");
+
+
