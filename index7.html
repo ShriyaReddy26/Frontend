@@ -22,6 +22,12 @@
                 let li = document.createElement("li")
                 li.textContent = itemInput.value
                 itemList.appendChild(li)
+                let newbutton = document.createElement("button")
+                newbutton.textContent = "Click here to delete"
+                newbutton.onclick = function (){
+                    li.remove();
+                };
+                li.appendChild(newbutton)
             }
             itemInput.value = ""
         }
