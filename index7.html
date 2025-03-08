@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Dynamically Add and Delete List Items</h1>
+    <input type="text" id="itemInput" placeholder="Enter an Item">
+    <button id="addItemButton" onclick="addFunc()">Add Item</button>
+    <ul id="itemList"></ul>
+
+    <script>
+        const button = document.getElementById('addItemButton');
+        const itemList = document.getElementById('itemList');
+        const itemInput = document.getElementById('itemInput');
+
+
+        function addFunc(){
+            if (itemInput.value !== ""){
+                let li = document.createElement("li")
+                li.textContent = itemInput.value
+                itemList.appendChild(li)
+            }
+            itemInput.value = ""
+        }
+            
+    </script>
+</body>
+</html>
