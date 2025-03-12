@@ -22,5 +22,11 @@ const mypromise = new Promise((resolve,reject)=>{
 })
 
 mypromise
- .then((value)=>{console.log(value)})
+ .then((value)=>{
+    console.log(value)
+return "hello this is shriya"
+})
+.then(message=>{
+    console.log(message)
+})
  .catch((error)=>{console.log(error)})
