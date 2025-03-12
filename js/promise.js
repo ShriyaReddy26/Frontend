@@ -26,6 +26,8 @@ mypromise
     console.log(value)
 return "hello this is shriya"
 })
+
+
 .then(message=>{
     console.log(message)
 })
