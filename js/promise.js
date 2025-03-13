@@ -12,20 +12,20 @@
 //     console.log(error + " reject");
 //    })
     
-const mypromise = new Promise((resolve,reject)=>{
-    const randomNum = Math.random();
-    if(randomNum>0.5){
-        resolve("Numer greater")
-    }else{
-        reject("smaller")
-    }
-})
+// const mypromise = new Promise((resolve,reject)=>{
+//     const randomNum = Math.random();
+//     if(randomNum>0.5){
+//         resolve("Numer greater")
+//     }else{
+//         reject("smaller")
+//     }
+// })
 
-mypromise
- .then((value)=>{
-    console.log(value)
-return "hello this is shriya"
-})
+// mypromise
+//  .then((value)=>{
+//     console.log(value)
+// return "hello this is shriya"
+// })
 
 
 .then(message=>{
