@@ -64,16 +64,36 @@
 // .catch((error)=>{console.log(error)})
 
 
-function addSum(){
-    let s = 0
-    for (let i = 0 ; i<=100000;i++){
-        s+=1
-    }
-    return s
+// function addSum(){
+//     let s = 0
+//     for (let i = 0 ; i<=100000;i++){
+//         s+=1
+//     }
+//     return s
+// }
+
+// let start = performance.now()
+// let sum = addSum()
+// let end = performance.now()
+
+// console.log(end-start)
+
+function fetchUserData(){
+    return new Promise((resolve)=>{
+        setTimeout(()=> resolve('User data received'), 1000);
+    });
 }
-
-let start = performance.now()
-let sum = addSum()
-let end = performance.now()
-
-console.log(end-start)
+function fetchPosts(){
+    return new Promise((resolve)=>{
+        setTimeout(()=> resolve('Posts data received'), 500);
+    });
+}
+fetchUserData()
+    .then((userData)=>{
+        console.log(userData);
+        return fetchPosts();
+    })
+    .then((postDataMess)=>{
+        console.log(postDataMess);
+    })
+    .catch((error)=>{});
