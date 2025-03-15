@@ -97,3 +97,14 @@ fetchUserData()
         console.log(postDataMess);
     })
     .catch((error)=>{});
+// AsyncFunction.............................................................................
+async function asyncFunction(){
+     try{
+        let data = await asyncFunction()
+        console.log(data)
+        }catch(error){
+            console.log(error)
+        }
+    }                     
+
+    
