@@ -81,4 +81,62 @@ function countOccurrences(str) {
 }
 console.log(countOccurrences("hello")); 
 
-// 11. flatten
+// OUTPUT BASED
+// QUESTION 1
+console.log(1 + "2" + "2");  //"122"
+console.log(1 + +"2" + "2"); //"32"
+console.log(1 + -"1" + "2"); //"02"
+console.log(+"1" + "1" + "2");//"112"
+console.log("A" - "B" + "2");//"NAN2"
+console.log("A" - "B" + 2);//NaN
+
+// QUESTION 2
+console.log(0.1 + 0.2 === 0.3);//False
+
+// QUESTION 3
+let a = {};
+let b = { key: "b" };
+let c = { key: "c" };
+
+a[b] = 123;
+a[c] = 456;
+
+console.log(a[b]); // 456
+
+// QUESTION 4
+function foo() {
+    return
+    {
+        name: "John"
+    };
+}
+console.log(foo()); //undefined
+
+// QUESTION 5
+function sum(a) {
+    return function (b) {
+        return function (c) {
+            return a + b + c;
+        };
+    };
+}
+console.log(sum(2)(3)(4)); // 9
+
+// QUESTION 8
+console.log(typeof NaN); //number
+
+// QUESTION 9
+function isEmpty(obj) {
+    return Object.keys(obj).length === 0;
+}
+
+console.log(isEmpty({}));          // true
+console.log(isEmpty({ key: "value" })); // false 
+
+// QUESTION 10
+function test() {
+    console.log(a);
+    var a = 5;
+    console.log(a);
+}
+test();//5

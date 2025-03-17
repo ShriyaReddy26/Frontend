@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AJAX Example</title>
+    <script>
+        
+        var productsData = [
+            {
+                "id": 1,
+                "name": "Laptop",
+                "price": 999.99,
+                "description": "High performance laptop for gaming and work.",
+                "category": "Electronics"
+            },
+            {
+                "id": 2,
+                "name": "Smartphone",
+                "price": 499.99,
+                "description": "Latest model smartphone with great features.",
+                "category": "Electronics"
+            },
+            {
+                "id": 3,
+                "name": "Headphones",
+                "price": 199.99,
+                "description": "Noise-cancelling headphones with premium sound quality.",
+                "category": "Accessories"
+            }
+        ];
+
+        function fetchProducts() {
+            setTimeout(function(){
+                let products = productsData;
+                let ullist = document.createElement("ul")
+                
+                products.forEach((obj)=>{
+                    let lilist = document.createElement("li")
+                    lilist.textContent = `${obj.name}`
+                    ullist.appendChild(lilist)
+                })
+                document.body.appendChild(ullist)
+
+            },1000)
+        }
+    </script>
+</head>
+<body>
+    <h1>Product List</h1>
+    <button onclick="fetchProducts()">Fetch Products</button>
+</body>
+</html>
