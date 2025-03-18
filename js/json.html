@@ -37,7 +37,7 @@
                 
                 products.forEach((obj)=>{
                     let lilist = document.createElement("li")
-                    lilist.textContent = `${obj.name}`
+                    lilist.textContent = `${obj.name}`  +  `${obj.price}`  +  `${obj.description}`  +  `${obj.accessories}`
                     ullist.appendChild(lilist)
                 })
                 document.body.appendChild(ullist)
