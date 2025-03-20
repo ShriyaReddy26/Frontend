@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+    margin: 0;
+}
+
+
+#quote-container {
+    background: white;
+    padding: 20px;
+    max-width: 600px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+#quote-text {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+
+#quote-author {
+    font-size: 1.2rem;
+    color: #555;
+    font-style: italic;
+}
+
+
+#button {
+    margin-top: 20px;
+    padding: 10px 15px;
+    font-size: 1rem;
+    color: white;
+    background-color: palevioletred;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+#button:hover {
+    background-color: palevioletred;
+}
+    </style>
+</head>
+<body>
+    <div id="quote-container">
+        <div id="quote-text">
+        </div>
+        <div id="quote-author">
+        </div>
+        <button id="button">New Quote</button>
+    </div>
+    
+    <script>
+        let text = document.getElementById("quote-text");
+        let author = document.getElementById("quote-author");
+        let button = document.getElementById("button");
+
+        let quotesArr = []
+        let index = 0
+
+        button.addEventListener("click",()=>(randomIndex()));
+        function randomIndex(){
+            index = Math.floor(Math.random() * quotesArr.length)
+            getQuotes(index)
+        }
+        async function getQuotes(index) {
+            let url= "https://jacintodesign.github.io/quotes-api/data/quotes.json";
+
+            try {
+                let response = await fetch(url)
+                quotesArr = await response.json();
+                console.log(quotesArr);
+
+                let object = quotesArr[index]
+                text.textContent = object.text
+                author.textContent = object.author
+            }
+            catch(error){
+                console.log(error);
+            }
+
+        }
+        getQuotes(index)
+
+        
+        
+    </script>
+</body>
+</html>
